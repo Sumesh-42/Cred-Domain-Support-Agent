@@ -109,7 +109,8 @@ try:
         doc_id: str = Field(..., description="Unique document code, e.g. DOC-NEW-POLICY")
         topic: str = Field(..., description="Policy topic name")
         title: str = Field(..., description="Formal document title")
-        content: str = Field(..., description="2-5 sentences of verified policy text")
+        content: Optional[str] = Field(None, description="2-5 sentences of verified policy text")
+        text: Optional[str] = Field(None, description="Alternative field for policy content text")
 
     class AddDocumentResponse(BaseModel):
         success: bool
@@ -159,11 +160,15 @@ try:
         t0 = time.time()
         trace_id = str(uuid.uuid4())
 
+        doc_text = (req.content or req.text or "").strip()
+        if not doc_text:
+            raise HTTPException(status_code=422, detail="Either 'content' or 'text' must be provided.")
+
         new_doc = {
             "doc_id": req.doc_id.strip().upper(),
             "topic": req.topic.strip(),
             "title": req.title.strip(),
-            "content": req.content.strip(),
+            "content": doc_text,
         }
 
         # Index into in-memory collections
@@ -294,4 +299,18 @@ def run_api_smoke_test():
 
 
 if __name__ == "__main__":
-    run_api_smoke_test()
+    import sys
+    if "--test" in sys.argv or "--smoke" in sys.argv:
+        run_api_smoke_test()
+    else:
+        try:
+            import uvicorn
+            print("=" * 70)
+            print("STARTING CRED DOMAIN SUPPORT AGENT FASTAPI SERVER")
+            print("Listening at: http://127.0.0.1:8000")
+            print("API Documentation available at: http://127.0.0.1:8000/docs")
+            print("=" * 70)
+            uvicorn.run("api:app", host="127.0.0.1", port=8000, reload=False)
+        except ImportError:
+            print("uvicorn is not installed. Running local smoke test instead...")
+            run_api_smoke_test()
