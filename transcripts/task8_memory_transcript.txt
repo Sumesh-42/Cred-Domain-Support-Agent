@@ -1,0 +1,30 @@
+===========================================================================
+TASK 8: MULTI-TURN MEMORY PERSISTENCE TRANSCRIPT
+===========================================================================
+
+--- SESSION 1: MULTI-TURN EXCHANGE (Thread: thread_multiturn_demo) ---
+[State Initialization] Thread memory cleared. Beginning Turn 1.
+
+User (Turn 1): Please check the status for loan application CRED-LN-0004
+Agent (Turn 1): Application Record: CRED-LN-0004 | Category: Personal Loan | Status: Submitted | Amount: ₹440,000 | Created: 22 days ago | Fraud Review: False | Escalation Score: 0.2567 (SLA Normal).
+  [Intent: loan_status | Escalation Score: 0.2567 | Sources: ['CRED-LN-0004']]
+  [Disk Check] History entries in 'conversation_history.json': 1 turn(s) persisted.
+
+User (Turn 2 - Follow-up referring to antecedent): What was its status again and what does its escalation score indicate?
+Agent (Turn 2): Application Record: CRED-LN-0004 | Category: Personal Loan | Status: Submitted | Amount: ₹440,000 | Created: 22 days ago | Fraud Review: False | Escalation Score: 0.2567 (SLA Normal).
+  [Intent: loan_status | Carried Forward Record: ['CRED-LN-0004'] | Escalation Score: 0.2567]
+
+===========================================================================
+--- SESSION 2: FRESH CONVERSATION TRANSCRIPT (Thread: thread_fresh_demo) ---
+===========================================================================
+[State Initialization] New thread 'thread_fresh_demo' initialized with empty context.
+
+User (Turn 1 on fresh session): What was its status again and what does its escalation score indicate?
+Agent (Fresh Turn): Application Record: CRED-LN-0001 | Category: Auto Loan | Status: Submitted | Amount: ₹850,000 | Created: 7 days ago | Fraud Review: False | Escalation Score: 0.0817 (SLA Normal).
+  [Intent: loan_status | State Absent Verified: Prior context not carried across threads]
+
+[Persistent Memory JSON Dump Summary]
+  - Threads on disk: ['default', 'guardrail_pii_test', 'guardrail_groundedness_test', 'fastapi_test_thread', 'thread_multiturn_demo', 'thread_fresh_demo']
+  - thread_multiturn_demo: 2 turn(s)
+  - thread_fresh_demo: 1 turn(s)
+===========================================================================

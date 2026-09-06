@@ -1,0 +1,113 @@
+{
+  "benchmark_date": "2026-09-06",
+  "eval_dataset_size": 6,
+  "in_scope_query_count": 5,
+  "mean_context_relevance": 0.8,
+  "mean_groundedness": 1.0,
+  "mean_answer_relevance": 0.8519,
+  "overall_triad_score": 0.884,
+  "individual_evaluations": [
+    {
+      "query": "What are the KYC documents required for a salaried applicant?",
+      "category": "In-Scope",
+      "target_docs": [
+        "DOC-KYC-REQUIREMENTS"
+      ],
+      "retrieved_sources": [
+        "DOC-KYC-REQUIREMENTS"
+      ],
+      "retrieval_similarity": 0.2645,
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 0.6667,
+      "triad_average": 0.8889,
+      "fallback_triggered": false,
+      "answer_preview": "According to Cred Lending Policy (DOC-KYC-REQUIREMENTS): Know Your Customer (KYC) Document Requireme..."
+    },
+    {
+      "query": "Can I prepay my floating rate home loan without penalty?",
+      "category": "In-Scope",
+      "target_docs": [
+        "DOC-PREPAYMENT-PENALTY"
+      ],
+      "retrieved_sources": [
+        "DOC-LOAN-ELIGIBILITY",
+        "DOC-NRI-ELIGIBILITY",
+        "DOC-PREPAYMENT-PENALTY"
+      ],
+      "retrieval_similarity": 0.1689,
+      "context_relevance": 0.3333,
+      "groundedness": 1.0,
+      "answer_relevance": 1.0,
+      "triad_average": 0.7778,
+      "fallback_triggered": false,
+      "answer_preview": "According to Cred Lending Policy (DOC-LOAN-ELIGIBILITY, DOC-NRI-ELIGIBILITY, DOC-PREPAYMENT-PENALTY)..."
+    },
+    {
+      "query": "How is EMI calculated on reducing balance?",
+      "category": "In-Scope",
+      "target_docs": [
+        "DOC-EMI-CALCULATION"
+      ],
+      "retrieved_sources": [
+        "DOC-EMI-CALCULATION",
+        "DOC-MIN-BALANCE"
+      ],
+      "retrieval_similarity": 0.2926,
+      "context_relevance": 0.6667,
+      "groundedness": 1.0,
+      "answer_relevance": 0.72,
+      "triad_average": 0.7956,
+      "fallback_triggered": false,
+      "answer_preview": "According to Cred Lending Policy (DOC-EMI-CALCULATION, DOC-MIN-BALANCE): Equated Monthly Installment..."
+    },
+    {
+      "query": "What are the annual fees and late charges for credit cards?",
+      "category": "In-Scope",
+      "target_docs": [
+        "DOC-CREDIT-CARD-FEES"
+      ],
+      "retrieved_sources": [
+        "DOC-CREDIT-CARD-FEES",
+        "DOC-ACCOUNT-CLOSURE"
+      ],
+      "retrieval_similarity": 0.2822,
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 0.8727,
+      "triad_average": 0.9576,
+      "fallback_triggered": false,
+      "answer_preview": "According to Cred Lending Policy (DOC-CREDIT-CARD-FEES, DOC-ACCOUNT-CLOSURE): Credit Card Fee Struct..."
+    },
+    {
+      "query": "What is the fraud dispute resolution turnaround time?",
+      "category": "In-Scope",
+      "target_docs": [
+        "DOC-FRAUD-DISPUTE"
+      ],
+      "retrieved_sources": [
+        "DOC-FRAUD-DISPUTE"
+      ],
+      "retrieval_similarity": 0.5193,
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 1.0,
+      "triad_average": 1.0,
+      "fallback_triggered": false,
+      "answer_preview": "According to Cred Lending Policy (DOC-FRAUD-DISPUTE): Fraud Dispute Resolution and Chargeback Workfl..."
+    },
+    {
+      "query": "What is the authentic recipe for chicken tikka masala?",
+      "category": "Out-of-Scope Fallback",
+      "target_docs": [],
+      "retrieved_sources": [],
+      "retrieval_similarity": 0.0,
+      "context_relevance": 0.0,
+      "groundedness": 1.0,
+      "answer_relevance": 1.0,
+      "triad_average": 0.6667,
+      "fallback_triggered": true,
+      "answer_preview": "I do not have enough verified information in the approved Cred policy documents to answer this question. Please refer this inquiry to Cred lending operations support."
+    }
+  ]
+}

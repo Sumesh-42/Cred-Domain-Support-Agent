@@ -1,0 +1,29 @@
+===========================================================================
+TASK 15: CHECKPOINT TIME-TRAVEL & INTERRUPT RESUMPTION DEMO
+===========================================================================
+
+[PHASE 1: STEP INTERRUPTION AFTER 'input_guardrail']
+Starting Graph Run for Thread: 'thread_timetravel_demo'
+Query: 'Check status for loan application CRED-LN-0004 with PAN ABCDE1234F'
+Setting stop_after_node = 'input_guardrail'
+Interrupted State at Node: 'input_guardrail'
+Completed Nodes: ['input_guardrail']
+Masked Query: 'Check status for loan application CRED-LN-0004 with PAN [MASKED_PAN]'
+Final Response Populated: False
+
+[PHASE 2: SQLITE CHECKPOINT AUDIT]
+Stored Checkpoint Steps in SQLite for 'thread_timetravel_demo':
+  - Step 1: Node 'input_guardrail' (Timestamp: 1788691232.5602014)
+
+[PHASE 3: RESUME FROM CHECKPOINT WITHOUT RE-RUNNING PRIOR NODES]
+Resumed Run Finished at Node: 'output_guardrail'
+All Completed Nodes: ['input_guardrail', 'loan_status_tool', 'output_guardrail']
+Agent Final Answer: Application Record: CRED-LN-0004 | Category: Personal Loan | Status: Submitted | Amount: ₹440,000 | Created: 22 days ago | Fraud Review: False | Escalation Score: 0.2567 (SLA Normal).
+
+[PHASE 4: TIME-TRAVEL REWIND]
+Rewinding thread state back to Step 1 ('input_guardrail') in SQLite...
+Active Checkpoint Steps after Rewind: [(1, 'input_guardrail')]
+Resuming execution from rewound Step 1 checkpoint:
+Time-Travel Branch Execution Succeeded. Final Node: 'output_guardrail'
+Completed Nodes in Rewound Branch: ['input_guardrail', 'loan_status_tool', 'output_guardrail']
+===========================================================================

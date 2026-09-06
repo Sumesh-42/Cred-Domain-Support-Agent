@@ -1,0 +1,467 @@
+{
+  "default": [
+    {
+      "turn_index": 1,
+      "timestamp": 1788690204.4618545,
+      "user_query": "What are the KYC documents required for a salaried applicant?",
+      "response": {
+        "response_id": "cdfe0d97-4c4c-4a03-a33e-5f779e82313c",
+        "intent": "rag_policy",
+        "query": "What are the KYC documents required for a salaried applicant?",
+        "answer": "According to Cred Lending Policy (DOC-KYC-REQUIREMENTS): Know Your Customer (KYC) Document Requirements: Salaried applicants must furnish the most recent three months' salary slips and six months' bank statements, while self-employed entities must provide audited Form 16 or ITR acknowledgments for the past two fiscal years. Know Your Customer (KYC) Document Requirements: In compliance with Reserve Bank of India Master Directions, KYC onboarding mandates submission of a Permanent Account Number (PAN) card together with one Officially Valid Document (OVD) for proof of identity and current address.",
+        "sources": [
+          "DOC-KYC-REQUIREMENTS"
+        ],
+        "escalation_required": false,
+        "escalation_score": null,
+        "escalation_reason": null,
+        "retrieval_similarity": 0.2645,
+        "confidence_score": 0.5,
+        "guardrails_applied": [
+          "OUTPUT_GROUNDEDNESS_VERIFIED"
+        ]
+      },
+      "context_state": {}
+    },
+    {
+      "turn_index": 2,
+      "timestamp": 1788690204.4638135,
+      "user_query": "Check status for loan application CRED-LN-0004",
+      "response": {
+        "response_id": "773ca559-9749-4642-a849-d43cc1ff2a5d",
+        "intent": "loan_status",
+        "query": "Check status for loan application CRED-LN-0004",
+        "answer": "Application Record: CRED-LN-0004 | Category: Personal Loan | Status: Submitted | Amount: \u20b9440,000 | Created: 22 days ago | Fraud Review: False | Escalation Score: 0.2567 (SLA Normal).",
+        "sources": [
+          "CRED-LN-0004"
+        ],
+        "escalation_required": false,
+        "escalation_score": 0.2567,
+        "escalation_reason": null,
+        "confidence_score": 0.98,
+        "guardrails_applied": []
+      },
+      "context_state": {
+        "loan_id": "CRED-LN-0004"
+      }
+    },
+    {
+      "turn_index": 3,
+      "timestamp": 1788690204.4659717,
+      "user_query": "My PAN is [MASKED_PAN] and Aadhaar is [MASKED_AADHAAR]. Can I get a loan?",
+      "response": {
+        "response_id": "28a10843-cd36-4b5e-85b9-ed0009f8b378",
+        "intent": "rag_policy",
+        "query": "My PAN is [MASKED_PAN] and Aadhaar is [MASKED_AADHAAR]. Can I get a loan?",
+        "answer": "According to Cred Lending Policy (DOC-KYC-REQUIREMENTS, DOC-LOAN-ELIGIBILITY): Know Your Customer (KYC) Document Requirements: Acceptable OVD proofs comprise Aadhaar card with masked identity numbers, valid Indian Passport, Voter Identity Card, or Driving License. Know Your Customer (KYC) Document Requirements: In compliance with Reserve Bank of India Master Directions, KYC onboarding mandates submission of a Permanent Account Number (PAN) card together with one Officially Valid Document (OVD) for proof of identity and current address.",
+        "sources": [
+          "DOC-KYC-REQUIREMENTS",
+          "DOC-LOAN-ELIGIBILITY"
+        ],
+        "escalation_required": false,
+        "escalation_score": null,
+        "escalation_reason": null,
+        "retrieval_similarity": 0.1283,
+        "confidence_score": 0.5,
+        "guardrails_applied": [
+          "PII_MASKED_PAN",
+          "PII_MASKED_AADHAAR",
+          "OUTPUT_GROUNDEDNESS_VERIFIED"
+        ]
+      },
+      "context_state": {}
+    },
+    {
+      "turn_index": 4,
+      "timestamp": 1788691114.514446,
+      "user_query": "What are the KYC documents required for a salaried applicant?",
+      "response": {
+        "response_id": "5056c81c-f68f-462f-8dcd-11872ab9eb19",
+        "intent": "rag_policy",
+        "query": "What are the KYC documents required for a salaried applicant?",
+        "answer": "According to Cred Lending Policy (DOC-KYC-REQUIREMENTS): Know Your Customer (KYC) Document Requirements: Salaried applicants must furnish the most recent three months' salary slips and six months' bank statements, while self-employed entities must provide audited Form 16 or ITR acknowledgments for the past two fiscal years. Know Your Customer (KYC) Document Requirements: In compliance with Reserve Bank of India Master Directions, KYC onboarding mandates submission of a Permanent Account Number (PAN) card together with one Officially Valid Document (OVD) for proof of identity and current address.",
+        "sources": [
+          "DOC-KYC-REQUIREMENTS"
+        ],
+        "escalation_required": false,
+        "escalation_score": null,
+        "escalation_reason": null,
+        "retrieval_similarity": 0.2645,
+        "confidence_score": 0.5,
+        "guardrails_applied": [
+          "OUTPUT_GROUNDEDNESS_VERIFIED"
+        ]
+      },
+      "context_state": {}
+    },
+    {
+      "turn_index": 5,
+      "timestamp": 1788691114.516749,
+      "user_query": "Check status for loan application CRED-LN-0004",
+      "response": {
+        "response_id": "757538db-5f3a-4ec0-bf5f-bbd8e9919f6d",
+        "intent": "loan_status",
+        "query": "Check status for loan application CRED-LN-0004",
+        "answer": "Application Record: CRED-LN-0004 | Category: Personal Loan | Status: Submitted | Amount: \u20b9440,000 | Created: 22 days ago | Fraud Review: False | Escalation Score: 0.2567 (SLA Normal).",
+        "sources": [
+          "CRED-LN-0004"
+        ],
+        "escalation_required": false,
+        "escalation_score": 0.2567,
+        "escalation_reason": null,
+        "confidence_score": 0.98,
+        "guardrails_applied": []
+      },
+      "context_state": {
+        "loan_id": "CRED-LN-0004"
+      }
+    },
+    {
+      "turn_index": 6,
+      "timestamp": 1788691114.5194566,
+      "user_query": "My PAN is [MASKED_PAN] and Aadhaar is [MASKED_AADHAAR]. Can I get a loan?",
+      "response": {
+        "response_id": "295fac21-8204-43eb-8a81-f7f85d38f6b2",
+        "intent": "rag_policy",
+        "query": "My PAN is [MASKED_PAN] and Aadhaar is [MASKED_AADHAAR]. Can I get a loan?",
+        "answer": "According to Cred Lending Policy (DOC-KYC-REQUIREMENTS, DOC-LOAN-ELIGIBILITY): Know Your Customer (KYC) Document Requirements: Acceptable OVD proofs comprise Aadhaar card with masked identity numbers, valid Indian Passport, Voter Identity Card, or Driving License. Know Your Customer (KYC) Document Requirements: In compliance with Reserve Bank of India Master Directions, KYC onboarding mandates submission of a Permanent Account Number (PAN) card together with one Officially Valid Document (OVD) for proof of identity and current address.",
+        "sources": [
+          "DOC-KYC-REQUIREMENTS",
+          "DOC-LOAN-ELIGIBILITY"
+        ],
+        "escalation_required": false,
+        "escalation_score": null,
+        "escalation_reason": null,
+        "retrieval_similarity": 0.1283,
+        "confidence_score": 0.5,
+        "guardrails_applied": [
+          "PII_MASKED_PAN",
+          "PII_MASKED_AADHAAR",
+          "OUTPUT_GROUNDEDNESS_VERIFIED"
+        ]
+      },
+      "context_state": {}
+    },
+    {
+      "turn_index": 7,
+      "timestamp": 1788691266.1197555,
+      "user_query": "What are the KYC documents required for a salaried applicant?",
+      "response": {
+        "response_id": "761bf34c-2f95-4fad-897d-d80bd02779b2",
+        "intent": "rag_policy",
+        "query": "What are the KYC documents required for a salaried applicant?",
+        "answer": "According to Cred Lending Policy (DOC-KYC-REQUIREMENTS): Know Your Customer (KYC) Document Requirements: Salaried applicants must furnish the most recent three months' salary slips and six months' bank statements, while self-employed entities must provide audited Form 16 or ITR acknowledgments for the past two fiscal years. Know Your Customer (KYC) Document Requirements: In compliance with Reserve Bank of India Master Directions, KYC onboarding mandates submission of a Permanent Account Number (PAN) card together with one Officially Valid Document (OVD) for proof of identity and current address.",
+        "sources": [
+          "DOC-KYC-REQUIREMENTS"
+        ],
+        "escalation_required": false,
+        "escalation_score": null,
+        "escalation_reason": null,
+        "retrieval_similarity": 0.2645,
+        "confidence_score": 0.5,
+        "guardrails_applied": [
+          "OUTPUT_GROUNDEDNESS_VERIFIED"
+        ]
+      },
+      "context_state": {}
+    },
+    {
+      "turn_index": 8,
+      "timestamp": 1788691499.3485534,
+      "user_query": "What are the KYC documents required for a salaried applicant?",
+      "response": {
+        "response_id": "724b8d44-bb92-4615-bd1e-13223a9bcf5f",
+        "intent": "rag_policy",
+        "query": "What are the KYC documents required for a salaried applicant?",
+        "answer": "According to Cred Lending Policy (DOC-KYC-REQUIREMENTS): Know Your Customer (KYC) Document Requirements: Salaried applicants must furnish the most recent three months' salary slips and six months' bank statements, while self-employed entities must provide audited Form 16 or ITR acknowledgments for the past two fiscal years. Know Your Customer (KYC) Document Requirements: In compliance with Reserve Bank of India Master Directions, KYC onboarding mandates submission of a Permanent Account Number (PAN) card together with one Officially Valid Document (OVD) for proof of identity and current address.",
+        "sources": [
+          "DOC-KYC-REQUIREMENTS"
+        ],
+        "escalation_required": false,
+        "escalation_score": null,
+        "escalation_reason": null,
+        "retrieval_similarity": 0.2645,
+        "confidence_score": 0.5,
+        "guardrails_applied": [
+          "OUTPUT_GROUNDEDNESS_VERIFIED"
+        ]
+      },
+      "context_state": {}
+    }
+  ],
+  "guardrail_pii_test": [
+    {
+      "turn_index": 1,
+      "timestamp": 1788690251.665233,
+      "user_query": "Hello, my PAN is [MASKED_PAN], my Aadhaar card number is [MASKED_AADHAAR], and my salary bank account is [MASKED_BANK_ACCOUNT]. What is the loan eligibility for Personal Loan?",
+      "response": {
+        "response_id": "a32d8e04-adb5-4bd1-943a-c04c34b555c5",
+        "intent": "rag_policy",
+        "query": "Hello, my PAN is [MASKED_PAN], my Aadhaar card number is [MASKED_AADHAAR], and my salary bank account is [MASKED_BANK_ACCOUNT]. What is the loan eligibility for Personal Loan?",
+        "answer": "According to Cred Lending Policy (DOC-KYC-REQUIREMENTS, DOC-LOAN-ELIGIBILITY, DOC-NRI-ELIGIBILITY): Know Your Customer (KYC) Document Requirements: In compliance with Reserve Bank of India Master Directions, KYC onboarding mandates submission of a Permanent Account Number (PAN) card together with one Officially Valid Document (OVD) for proof of identity and current address. Loan Eligibility Criteria by Loan Type: Cred lending eligibility requires salaried applicants to be aged 21 to 58 with a minimum net monthly income of \u20b935,000 for Personal Loans, whereas self-employed professionals require at least two consecutive profitable business assessment years.",
+        "sources": [
+          "DOC-KYC-REQUIREMENTS",
+          "DOC-LOAN-ELIGIBILITY",
+          "DOC-NRI-ELIGIBILITY"
+        ],
+        "escalation_required": false,
+        "escalation_score": null,
+        "escalation_reason": null,
+        "retrieval_similarity": 0.2168,
+        "confidence_score": 0.5,
+        "guardrails_applied": [
+          "PII_MASKED_PAN",
+          "PII_MASKED_AADHAAR",
+          "PII_MASKED_BANK_ACCOUNT",
+          "OUTPUT_GROUNDEDNESS_VERIFIED"
+        ]
+      },
+      "context_state": {}
+    },
+    {
+      "turn_index": 2,
+      "timestamp": 1788691121.4154434,
+      "user_query": "Hello, my PAN is [MASKED_PAN], my Aadhaar card number is [MASKED_AADHAAR], and my salary bank account is [MASKED_BANK_ACCOUNT]. What is the loan eligibility for Personal Loan?",
+      "response": {
+        "response_id": "28662a5e-935d-4c93-9a4c-e66314ab138f",
+        "intent": "rag_policy",
+        "query": "Hello, my PAN is [MASKED_PAN], my Aadhaar card number is [MASKED_AADHAAR], and my salary bank account is [MASKED_BANK_ACCOUNT]. What is the loan eligibility for Personal Loan?",
+        "answer": "According to Cred Lending Policy (DOC-KYC-REQUIREMENTS, DOC-LOAN-ELIGIBILITY, DOC-NRI-ELIGIBILITY): Know Your Customer (KYC) Document Requirements: In compliance with Reserve Bank of India Master Directions, KYC onboarding mandates submission of a Permanent Account Number (PAN) card together with one Officially Valid Document (OVD) for proof of identity and current address. Loan Eligibility Criteria by Loan Type: Cred lending eligibility requires salaried applicants to be aged 21 to 58 with a minimum net monthly income of \u20b935,000 for Personal Loans, whereas self-employed professionals require at least two consecutive profitable business assessment years.",
+        "sources": [
+          "DOC-KYC-REQUIREMENTS",
+          "DOC-LOAN-ELIGIBILITY",
+          "DOC-NRI-ELIGIBILITY"
+        ],
+        "escalation_required": false,
+        "escalation_score": null,
+        "escalation_reason": null,
+        "retrieval_similarity": 0.2168,
+        "confidence_score": 0.5,
+        "guardrails_applied": [
+          "PII_MASKED_PAN",
+          "PII_MASKED_AADHAAR",
+          "PII_MASKED_BANK_ACCOUNT",
+          "OUTPUT_GROUNDEDNESS_VERIFIED"
+        ]
+      },
+      "context_state": {}
+    }
+  ],
+  "guardrail_groundedness_test": [
+    {
+      "turn_index": 1,
+      "timestamp": 1788690251.6683607,
+      "user_query": "What is the authentic chef recipe for chicken tikka masala?",
+      "response": {
+        "response_id": "b051ca1d-aa83-4961-97ec-449ad8c54eab",
+        "intent": "fallback",
+        "query": "What is the authentic chef recipe for chicken tikka masala?",
+        "answer": "I do not have enough verified information in the approved Cred policy documents to answer this question. Please refer this inquiry to Cred lending operations support.",
+        "sources": [],
+        "escalation_required": false,
+        "escalation_score": null,
+        "escalation_reason": null,
+        "retrieval_similarity": 0.0,
+        "confidence_score": 0.4,
+        "guardrails_applied": [
+          "OUTPUT_GROUNDEDNESS_REFUSAL"
+        ]
+      },
+      "context_state": {}
+    },
+    {
+      "turn_index": 2,
+      "timestamp": 1788691121.4193609,
+      "user_query": "What is the authentic chef recipe for chicken tikka masala?",
+      "response": {
+        "response_id": "37150165-3efd-49ba-97ae-84fb4f9d9c90",
+        "intent": "fallback",
+        "query": "What is the authentic chef recipe for chicken tikka masala?",
+        "answer": "I do not have enough verified information in the approved Cred policy documents to answer this question. Please refer this inquiry to Cred lending operations support.",
+        "sources": [],
+        "escalation_required": false,
+        "escalation_score": null,
+        "escalation_reason": null,
+        "retrieval_similarity": 0.0,
+        "confidence_score": 0.4,
+        "guardrails_applied": [
+          "OUTPUT_GROUNDEDNESS_REFUSAL"
+        ]
+      },
+      "context_state": {}
+    }
+  ],
+  "fastapi_test_thread": [
+    {
+      "turn_index": 1,
+      "timestamp": 1788690281.3799143,
+      "user_query": "My PAN is [MASKED_PAN] and bank account is [MASKED_BANK_ACCOUNT]. What is the education loan eligibility?",
+      "response": {
+        "response_id": "21f75ba8-8a0c-4429-9e3b-eee91b95f26d",
+        "intent": "rag_policy",
+        "query": "My PAN is [MASKED_PAN] and bank account is [MASKED_BANK_ACCOUNT]. What is the education loan eligibility?",
+        "answer": "According to Cred Lending Policy (DOC-LOAN-ELIGIBILITY, DOC-NRI-ELIGIBILITY, DOC-KYC-REQUIREMENTS): Loan Eligibility Criteria by Loan Type: Auto and education loans mandate a minimum credit score of 720, with education loans exceeding \u20b9750,000 requiring a parent or guardian as primary financial co-guarantor. Non-Resident Indian (NRI) Account and Loan Eligibility: NRE account balances and interest yields remain completely exempt from Indian income taxation and are freely repatriable into foreign currency accounts without regulatory ceiling.",
+        "sources": [
+          "DOC-LOAN-ELIGIBILITY",
+          "DOC-NRI-ELIGIBILITY",
+          "DOC-KYC-REQUIREMENTS"
+        ],
+        "escalation_required": false,
+        "escalation_score": null,
+        "escalation_reason": null,
+        "retrieval_similarity": 0.3346,
+        "confidence_score": 0.5,
+        "guardrails_applied": [
+          "PII_MASKED_PAN",
+          "PII_MASKED_BANK_ACCOUNT",
+          "OUTPUT_GROUNDEDNESS_VERIFIED"
+        ]
+      },
+      "context_state": {}
+    }
+  ],
+  "thread_multiturn_demo": [
+    {
+      "turn_index": 1,
+      "timestamp": 1788691121.3028615,
+      "user_query": "Please check the status for loan application CRED-LN-0004",
+      "response": {
+        "response_id": "d9b6cf26-89a5-4829-b9d5-6666771334fa",
+        "intent": "loan_status",
+        "query": "Please check the status for loan application CRED-LN-0004",
+        "answer": "Application Record: CRED-LN-0004 | Category: Personal Loan | Status: Submitted | Amount: \u20b9440,000 | Created: 22 days ago | Fraud Review: False | Escalation Score: 0.2567 (SLA Normal).",
+        "sources": [
+          "CRED-LN-0004"
+        ],
+        "escalation_required": false,
+        "escalation_score": 0.2567,
+        "escalation_reason": null,
+        "confidence_score": 0.98,
+        "guardrails_applied": []
+      },
+      "context_state": {
+        "loan_id": "CRED-LN-0004"
+      }
+    },
+    {
+      "turn_index": 2,
+      "timestamp": 1788691121.3056066,
+      "user_query": "What was its status again and what does its escalation score indicate?",
+      "response": {
+        "response_id": "e0079e1d-8ce4-40ff-8f04-6170f89b6671",
+        "intent": "loan_status",
+        "query": "What was its status again and what does its escalation score indicate?",
+        "answer": "Application Record: CRED-LN-0004 | Category: Personal Loan | Status: Submitted | Amount: \u20b9440,000 | Created: 22 days ago | Fraud Review: False | Escalation Score: 0.2567 (SLA Normal).",
+        "sources": [
+          "CRED-LN-0004"
+        ],
+        "escalation_required": false,
+        "escalation_score": 0.2567,
+        "escalation_reason": null,
+        "confidence_score": 0.98,
+        "guardrails_applied": []
+      },
+      "context_state": {
+        "loan_id": "CRED-LN-0004"
+      }
+    }
+  ],
+  "thread_fresh_demo": [
+    {
+      "turn_index": 1,
+      "timestamp": 1788691121.309009,
+      "user_query": "What was its status again and what does its escalation score indicate?",
+      "response": {
+        "response_id": "bbafc434-225b-49e2-9dd2-cb2f1461cabb",
+        "intent": "loan_status",
+        "query": "What was its status again and what does its escalation score indicate?",
+        "answer": "Application Record: CRED-LN-0001 | Category: Auto Loan | Status: Submitted | Amount: \u20b9850,000 | Created: 7 days ago | Fraud Review: False | Escalation Score: 0.0817 (SLA Normal).",
+        "sources": [
+          "CRED-LN-0001"
+        ],
+        "escalation_required": false,
+        "escalation_score": 0.0817,
+        "escalation_reason": null,
+        "confidence_score": 0.98,
+        "guardrails_applied": []
+      },
+      "context_state": {
+        "loan_id": "CRED-LN-0001"
+      }
+    }
+  ],
+  "thread_timetravel_demo": [
+    {
+      "turn_index": 1,
+      "timestamp": 1788691232.5625503,
+      "user_query": "Check status for loan application CRED-LN-0004 with PAN [MASKED_PAN]",
+      "response": {
+        "response_id": "9e9b23f3-654c-4ff8-ae6d-9316f1142072",
+        "intent": "loan_status",
+        "query": "Check status for loan application CRED-LN-0004 with PAN [MASKED_PAN]",
+        "answer": "Application Record: CRED-LN-0004 | Category: Personal Loan | Status: Submitted | Amount: \u20b9440,000 | Created: 22 days ago | Fraud Review: False | Escalation Score: 0.2567 (SLA Normal).",
+        "sources": [
+          "CRED-LN-0004"
+        ],
+        "escalation_required": false,
+        "escalation_score": 0.2567,
+        "escalation_reason": null,
+        "confidence_score": 0.98,
+        "guardrails_applied": [
+          "PII_MASKED_PAN"
+        ]
+      },
+      "context_state": {
+        "loan_id": "CRED-LN-0004"
+      }
+    },
+    {
+      "turn_index": 2,
+      "timestamp": 1788691232.5654848,
+      "user_query": "Check status for loan application CRED-LN-0004 with PAN [MASKED_PAN]",
+      "response": {
+        "response_id": "b5233cd1-47d3-4c8a-b27d-06cb3325907e",
+        "intent": "loan_status",
+        "query": "Check status for loan application CRED-LN-0004 with PAN [MASKED_PAN]",
+        "answer": "Application Record: CRED-LN-0004 | Category: Personal Loan | Status: Submitted | Amount: \u20b9440,000 | Created: 22 days ago | Fraud Review: False | Escalation Score: 0.2567 (SLA Normal).",
+        "sources": [
+          "CRED-LN-0004"
+        ],
+        "escalation_required": false,
+        "escalation_score": 0.2567,
+        "escalation_reason": null,
+        "confidence_score": 0.98,
+        "guardrails_applied": [
+          "PII_MASKED_PAN"
+        ]
+      },
+      "context_state": {
+        "loan_id": "CRED-LN-0004"
+      }
+    }
+  ],
+  "eval_test_thread": [
+    {
+      "turn_index": 1,
+      "timestamp": 1788691499.3519025,
+      "user_query": "Check status for loan application CRED-LN-0004",
+      "response": {
+        "response_id": "22ed25ca-de7f-4417-a934-ae5b2ee50184",
+        "intent": "loan_status",
+        "query": "Check status for loan application CRED-LN-0004",
+        "answer": "Application Record: CRED-LN-0004 | Category: Personal Loan | Status: Submitted | Amount: \u20b9440,000 | Created: 22 days ago | Fraud Review: False | Escalation Score: 0.2567 (SLA Normal).",
+        "sources": [
+          "CRED-LN-0004"
+        ],
+        "escalation_required": false,
+        "escalation_score": 0.2567,
+        "escalation_reason": null,
+        "confidence_score": 0.98,
+        "guardrails_applied": []
+      },
+      "context_state": {
+        "loan_id": "CRED-LN-0004"
+      }
+    }
+  ]
+}
