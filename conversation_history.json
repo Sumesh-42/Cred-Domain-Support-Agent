@@ -27,5 +27,31 @@
       },
       "context_state": {}
     }
+  ],
+  "browser_test_1": [
+    {
+      "turn_index": 1,
+      "timestamp": 1788701064.3028066,
+      "user_query": "My PAN is [MASKED_PAN]. What are the KYC requirements for salaried applicants?",
+      "response": {
+        "response_id": "be4778b5-51b6-4eec-a260-42bd464e82e8",
+        "intent": "rag_policy",
+        "query": "My PAN is [MASKED_PAN]. What are the KYC requirements for salaried applicants?",
+        "answer": "According to Cred Lending Policy (DOC-LOAN-ELIGIBILITY): Loan Eligibility Criteria by Loan Type: Cred lending eligibility requires salaried applicants to be aged 21 to 58 with a minimum net monthly income of \u20b935,000 for Personal Loans, whereas self-employed professionals require at least two consecutive profitable business assessment years. Loan Eligibility Criteria by Loan Type: Home loan applicants must demonstrate a steady debt-to-income ratio below 50% alongside co-applicant collateral verification for properties located within approved municipal zones.",
+        "sources": [
+          "DOC-LOAN-ELIGIBILITY"
+        ],
+        "escalation_required": false,
+        "escalation_score": null,
+        "escalation_reason": null,
+        "retrieval_similarity": 1.0,
+        "confidence_score": 1.0,
+        "guardrails_applied": [
+          "PII_MASKED_PAN",
+          "OUTPUT_GROUNDEDNESS_VERIFIED"
+        ]
+      },
+      "context_state": {}
+    }
   ]
 }
