@@ -1,6 +1,6 @@
 """
 Cred Domain Support Agent - Master Verification & Benchmark Runner
-Runs comprehensive validation for Tasks 1 through 15.
+Runs comprehensive validation across all subsystems.
 """
 
 import os
@@ -33,7 +33,7 @@ def run_master_test_suite():
     print("=" * 80)
 
     # 1. Dataset Checks
-    print("\n[CHECK 1/12] Synthetic Tabular Dataset (Task 2):")
+    print("\n[CHECK 1/12] Synthetic Tabular Dataset:")
     assert len(LOAN_APPLICATIONS) == 50, f"Expected 50 records, got {len(LOAN_APPLICATIONS)}"
     fraud_count = sum(1 for r in LOAN_APPLICATIONS if r["flagged_for_fraud_review"])
     fraud_pct = (fraud_count / 50) * 100
@@ -42,25 +42,25 @@ def run_master_test_suite():
     assert 10.0 <= fraud_pct <= 30.0, "Fraud percentage outside 10%-30% range!"
 
     # 2. Knowledge Base Checks
-    print("\n[CHECK 2/12] Regulatory Policy Knowledge Base (Task 1):")
+    print("\n[CHECK 2/12] Regulatory Policy Knowledge Base:")
     assert len(POLICY_DOCUMENTS) >= 10, f"Expected at least 10 documents, got {len(POLICY_DOCUMENTS)}"
     print(f"  - Policy documents count        : {len(POLICY_DOCUMENTS)}")
     for d in POLICY_DOCUMENTS[:3]:
         print(f"    * {d['doc_id']}: {d['title']}")
 
-    # 3. Vector Chunking Dual Strategy (Task 3)
-    print("\n[CHECK 3/12] Vector Chunking Collections (Task 3):")
+    # 3. Vector Chunking Dual Strategy
+    print("\n[CHECK 3/12] Vector Chunking Collections:")
     print(f"  - Fixed-Size (100 token, 20 overlap) chunks : {len(FIXED_CHUNKS)}")
     print(f"  - Sentence-Based boundary chunks            : {len(SENTENCE_CHUNKS)}")
     assert len(FIXED_CHUNKS) > 0 and len(SENTENCE_CHUNKS) > 0
 
-    # 4. Empirical Threshold Calibration (Task 4)
-    print("\n[CHECK 4/12] Empirical Groundedness Threshold (Task 4):")
+    # 4. Empirical Threshold Calibration
+    print("\n[CHECK 4/12] Empirical Groundedness Threshold:")
     print(f"  - Calibrated Cosine Similarity Threshold     : {SIMILARITY_THRESHOLD:.4f}")
     assert SIMILARITY_THRESHOLD > 0.05, "Threshold unreasonably low!"
 
-    # 5. Precision@3 & Recall@3 Evaluation (Task 5)
-    print("\n[CHECK 5/12] Retrieval Evaluation (Task 5):")
+    # 5. Precision@3 & Recall@3 Evaluation
+    print("\n[CHECK 5/12] Retrieval Evaluation:")
     eval_res = evaluate_precision_recall_at_3()
     f_p = eval_res['fixed_size_averages']['avg_precision_at_3']
     f_r = eval_res['fixed_size_averages']['avg_recall_at_3']
@@ -70,22 +70,22 @@ def run_master_test_suite():
     print(f"  - Sentence-Based Strategy: Precision@3 = {s_p:.4f} | Recall@3 = {s_r:.4f}")
     print(f"  - Recommended Strategy   : Sentence-Based (Maintains legal clause boundary integrity)")
 
-    # 6. Loan Status Tool & Escalation Score (Task 6)
-    print("\n[CHECK 6/12] Loan Status Tool & Escalation Logic (Task 6):")
+    # 6. Loan Status Tool & Escalation Score
+    print("\n[CHECK 6/12] Loan Status Tool & Escalation Logic:")
     st_demo = check_loan_application_status("CRED-LN-0004")
     print(f"  - Tested record CRED-LN-0004: {st_demo['category']} | ₹{st_demo['loan_amount_inr']:,} | Escalation: {st_demo['escalation_score']:.4f}")
     assert st_demo["found"], "CRED-LN-0004 should exist!"
 
-    # 7. LangGraph Agent Graph (Task 7)
-    print("\n[CHECK 7/12] Multi-Node LangGraph State Graph (Task 7):")
+    # 7. LangGraph Agent Graph
+    print("\n[CHECK 7/12] Multi-Node LangGraph State Graph:")
     graph_run = AGENT_GRAPH.run("What are the KYC documents required for a salaried applicant?")
     print(f"  - Nodes executed : {graph_run['completed_nodes']}")
     print(f"  - Routed Intent  : {graph_run['intent']}")
     assert "input_guardrail" in graph_run["completed_nodes"]
     assert "output_guardrail" in graph_run["completed_nodes"]
 
-    # 8. Multi-Turn Persistent Conversation Memory (Task 8)
-    print("\n[CHECK 8/12] Persistent Conversation Memory (Task 8):")
+    # 8. Multi-Turn Persistent Conversation Memory
+    print("\n[CHECK 8/12] Persistent Conversation Memory:")
     CONVERSATION_MEMORY.reset_thread("eval_test_thread")
     ask_cred_agent("Check status for loan application CRED-LN-0004", thread_id="eval_test_thread")
     hist = CONVERSATION_MEMORY.get_history("eval_test_thread")
@@ -94,8 +94,8 @@ def run_master_test_suite():
     assert resolved["last_loan_id"] == "CRED-LN-0004", f"Expected CRED-LN-0004, got {resolved['last_loan_id']}"
     print(f"  - Multi-turn context resolution: VERIFIED (antecedent loan ID {resolved['last_loan_id']} preserved across turns)")
 
-    # 9. Schema & JSON-Schema Validation (Task 9)
-    print("\n[CHECK 9/12] Pydantic & JSON Schema Validation (Task 9):")
+    # 9. Schema & JSON-Schema Validation
+    print("\n[CHECK 9/12] Pydantic & JSON Schema Validation:")
     test_payload = {
         "response_id": "test-uuid",
         "intent": "rag_policy",
@@ -112,8 +112,8 @@ def run_master_test_suite():
     print(f"  - Schema adherence check: {'PASSED' if is_valid else 'FAILED'}")
     assert is_valid
 
-    # 10. Guardrails Test Suite (Task 10)
-    print("\n[CHECK 10/12] Guardrails Test Suite (Task 10):")
+    # 10. Guardrails Test Suite
+    print("\n[CHECK 10/12] Guardrails Test Suite:")
     masked, pii_guards = mask_pii("PAN: ABCDE1234F, Aadhaar: 1234 5678 9012, Bank: 987654321012")
     assert "ABCDE1234F" not in masked
     assert "1234 5678 9012" not in masked
@@ -124,14 +124,14 @@ def run_master_test_suite():
     assert is_inj
     print(f"  - Prompt Injection Interception: VERIFIED ('{inj_reason}')")
 
-    # 11. RAG Triad Evaluation (Task 13)
-    print("\n[CHECK 11/12] RAG Triad Benchmarking (Task 13):")
+    # 11. RAG Triad Evaluation
+    print("\n[CHECK 11/12] RAG Triad Benchmarking:")
     triad_summary = run_rag_triad_evaluation()
     print(f"  - RAG Triad Composite Score: {triad_summary['overall_triad_score']:.4f}")
     assert triad_summary["overall_triad_score"] >= 0.75
 
-    # 12. MCP Server & Structured Audit Logs (Tasks 12 & 14)
-    print("\n[CHECK 12/12] MCP Protocol & Audit Logging (Tasks 12 & 14):")
+    # 12. MCP Server & Structured Audit Logs
+    print("\n[CHECK 12/12] MCP Protocol & Audit Logging:")
     mcp_init = process_mcp_request({"jsonrpc": "2.0", "id": 1, "method": "initialize"})
     assert mcp_init["result"]["serverInfo"]["name"] == "cred-domain-support-mcp"
     print(f"  - MCP Protocol: Handshake successful with '{mcp_init['result']['serverInfo']['name']}'")

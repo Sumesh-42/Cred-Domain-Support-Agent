@@ -94,13 +94,13 @@ export const EvaluationDashboard: React.FC = () => {
         </div>
       </div>
 
-      {/* Task 4: Empirical Threshold Calibration */}
+      {/* Empirical Threshold Calibration */}
       <div className="p-5 rounded-xl border border-stone-200 bg-white shadow-xs space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Sliders className="w-4 h-4 text-stone-700" />
             <h3 className="text-xs font-bold text-stone-900 uppercase tracking-wide">
-              Task 4: Empirical Groundedness Threshold Calibration
+              Empirical Groundedness Threshold Calibration
             </h3>
           </div>
           <span className="font-mono text-xs font-bold px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200">
@@ -139,13 +139,13 @@ export const EvaluationDashboard: React.FC = () => {
         </div>
       </div>
 
-      {/* Task 5: Chunking Strategy Precision@3 vs Recall@3 */}
+      {/* Chunking Strategy Precision@3 vs Recall@3 */}
       <div className="p-5 rounded-xl border border-stone-200 bg-white shadow-xs space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Target className="w-4 h-4 text-stone-700" />
             <h3 className="text-xs font-bold text-stone-900 uppercase tracking-wide">
-              Task 5: Precision@3 & Recall@3 Retrieval Evaluation
+              Precision@3 & Recall@3 Retrieval Evaluation
             </h3>
           </div>
           <span className="text-xs font-medium text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">

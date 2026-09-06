@@ -1,6 +1,5 @@
 """
 Cred Domain Support Agent - RAG Core & Dual Chunking Engine
-Part 1, Tasks 3, 4, and 5
 
 Implements:
 1. Two chunking strategies:
@@ -231,8 +230,14 @@ class LocalVectorCollection:
 
 
 # Initialize both collections
+FIXED_SIZE_CHUNKS = FIXED_CHUNKS
 COLLECTION_FIXED = LocalVectorCollection("cred_kb_fixed_chunk", FIXED_CHUNKS)
 COLLECTION_SENTENCE = LocalVectorCollection("cred_kb_sentence_chunk", SENTENCE_CHUNKS)
+
+
+def search_policy_documents(query: str, strategy: str = "sentence", top_k: int = 3) -> List[Dict[str, Any]]:
+    col = COLLECTION_SENTENCE if strategy == "sentence" else COLLECTION_FIXED
+    return col.query(query, top_k=top_k)
 
 
 def try_chromadb_index():
@@ -265,7 +270,7 @@ def try_chromadb_index():
 
 
 # ----------------------------------------------------------------------
-# 3. Empirical Groundedness Threshold Calibration (Task 4)
+# 3. Empirical Groundedness Threshold Calibration
 # ----------------------------------------------------------------------
 
 # 3 In-scope calibration queries
@@ -317,7 +322,7 @@ SIMILARITY_THRESHOLD = CALIBRATION_DATA["chosen_threshold"]
 
 
 # ----------------------------------------------------------------------
-# 4. Grounded Generation (Task 4)
+# 4. Grounded Generation
 # ----------------------------------------------------------------------
 
 FALLBACK_MESSAGE = (
@@ -371,7 +376,7 @@ def generate_grounded_answer(
 
 
 # ----------------------------------------------------------------------
-# 5. Chunking Strategy Evaluation: Precision@3 & Recall@3 (Task 5)
+# 5. Chunking Strategy Evaluation: Precision@3 & Recall@3
 # ----------------------------------------------------------------------
 
 # Ground-truth mapping for evaluation queries
@@ -474,9 +479,12 @@ def evaluate_precision_recall_at_3() -> Dict[str, Any]:
     }
 
 
+evaluate_retrieval_strategies = evaluate_precision_recall_at_3
+
+
 if __name__ == "__main__":
     print("=" * 70)
-    print("TASK 4: EMPIRICAL GROUNDEDNESS THRESHOLD CALIBRATION")
+    print("EMPIRICAL GROUNDEDNESS THRESHOLD CALIBRATION")
     print("=" * 70)
     print("In-Scope Calibration Queries:")
     for item in CALIBRATION_DATA["in_scope_scores"]:
@@ -489,7 +497,7 @@ if __name__ == "__main__":
     print(f"Calibrated Threshold  : {SIMILARITY_THRESHOLD:.4f}")
 
     print("\n" + "=" * 70)
-    print("TASK 4 DEMONSTRATION: 5 IN-SCOPE QUERIES + 1 OUT-OF-SCOPE FALLBACK")
+    print("GROUNDEDNESS DEMONSTRATION: 5 IN-SCOPE QUERIES + 1 OUT-OF-SCOPE FALLBACK")
     print("=" * 70)
     for q_item in EVAL_QUERIES:
         gen = generate_grounded_answer(q_item["query"])
@@ -506,7 +514,7 @@ if __name__ == "__main__":
     print(f"A: {gen_oos['answer']}")
 
     print("\n" + "=" * 70)
-    print("TASK 5: PRECISION@3 & RECALL@3 EVALUATION")
+    print("PRECISION@3 & RECALL@3 EVALUATION")
     print("=" * 70)
     eval_res = evaluate_precision_recall_at_3()
     print("\n--- FIXED-SIZE CHUNKING COLLECTION ---")

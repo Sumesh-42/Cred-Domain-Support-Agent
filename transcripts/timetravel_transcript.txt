@@ -1,5 +1,5 @@
 ===========================================================================
-TASK 15: CHECKPOINT TIME-TRAVEL & INTERRUPT RESUMPTION DEMO
+CHECKPOINT TIME-TRAVEL & INTERRUPT RESUMPTION DEMO
 ===========================================================================
 
 [PHASE 1: STEP INTERRUPTION AFTER 'input_guardrail']

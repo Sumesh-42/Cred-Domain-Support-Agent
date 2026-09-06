@@ -1,6 +1,5 @@
 """
 Cred Domain Support Agent - LangGraph Orchestrator
-Part 2, Tasks 6, 7, 8, 9, 10
 
 Implements the multi-node state graph for Cred lending operations:
 - Node 1: input_guardrail (PII masking + injection detection)
@@ -155,7 +154,7 @@ def rag_policy_tool(state: AgentState) -> AgentState:
 
 
 # ----------------------------------------------------------------------
-# Node 3: Loan Status Tool Node (Task 6)
+# Node 3: Loan Status Tool Node
 # ----------------------------------------------------------------------
 
 def loan_status_tool(state: AgentState) -> AgentState:
@@ -318,7 +317,7 @@ def output_guardrail_node(state: AgentState) -> AgentState:
 
 
 # ----------------------------------------------------------------------
-# Graph Execution Engine & SQLite Checkpointing (Tasks 7 & 15)
+# Graph Execution Engine & SQLite Checkpointing
 # ----------------------------------------------------------------------
 
 CHECKPOINT_DB_PATH = "checkpoints.sqlite"

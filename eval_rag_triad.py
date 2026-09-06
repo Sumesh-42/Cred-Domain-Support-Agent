@@ -1,6 +1,5 @@
 """
 Cred Domain Support Agent - RAG Triad Evaluation
-Part 3, Task 13
 
 Evaluates the 3 core pillars of the RAG Triad across the 5 canonical in-scope queries:
 1. Context Relevance: Proportion of retrieved chunks that contain semantically relevant policy clauses.
@@ -94,7 +93,7 @@ def compute_answer_relevance(query: str, answer: str, fallback_triggered: bool) 
 
 def run_rag_triad_evaluation() -> Dict[str, Any]:
     print("=" * 80)
-    print("TASK 13: RAG TRIAD EVALUATION (Context Relevance, Groundedness, Answer Relevance)")
+    print("RAG TRIAD EVALUATION (Context Relevance, Groundedness, Answer Relevance)")
     print("=" * 80)
 
     results = []

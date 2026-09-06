@@ -1,0 +1,31 @@
+{
+  "calibrated_threshold": 0.0844,
+  "in_scope_samples": [
+    {
+      "query": "What are the KYC documents required for a salaried applicant?",
+      "top_1_similarity": 0.2645
+    },
+    {
+      "query": "Can I prepay my floating rate home loan without penalty?",
+      "top_1_similarity": 0.1689
+    },
+    {
+      "query": "How is EMI calculated on reducing balance?",
+      "top_1_similarity": 0.2926
+    }
+  ],
+  "out_of_scope_samples": [
+    {
+      "query": "What is the authentic recipe for chicken tikka masala?",
+      "top_1_similarity": 0.0
+    },
+    {
+      "query": "How many planetary moons orbit the planet Jupiter in outer space?",
+      "top_1_similarity": 0.0
+    }
+  ],
+  "min_in_scope_similarity": 0.1689,
+  "max_out_of_scope_similarity": 0.0,
+  "cluster_separation_margin": 0.1689,
+  "status": "CALIBRATED_STRICT_SEPARATION"
+}

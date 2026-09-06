@@ -1,6 +1,5 @@
 """
 Cred Domain Support Agent - Structured Output Schema
-Part 2, Task 9
 
 Defines the formal JSON Schema and Pydantic models for validated agent responses.
 Every agent response across RAG, loan status lookup, and guardrail interception

@@ -1,6 +1,5 @@
 """
 Cred Domain Support Agent - Persistent Conversation Memory
-Part 2, Task 8
 
 Persists multi-turn conversation exchanges to a JSON file on disk.
 Supports:

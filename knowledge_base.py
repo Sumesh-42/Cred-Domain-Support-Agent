@@ -1,6 +1,5 @@
 """
 Cred Domain Support Agent - Policy Knowledge Base
-Part 1, Task 2
 
 Contains 12 comprehensive policy documents covering all mandatory banking & lending topics.
 Each document strictly contains 2-5 well-structured, domain-accurate sentences.

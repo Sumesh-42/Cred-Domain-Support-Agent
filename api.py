@@ -1,6 +1,5 @@
 """
 Cred Domain Support Agent - FastAPI Deployment & Structured Logging
-Part 3, Tasks 11 & 12
 
 Exposes:
 - POST /ask : Agent question answering and loan application lookup
@@ -41,7 +40,7 @@ def log_structured_request(
     extra: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     """
-    Task 12: Logs request as one JSON-Lines entry with trace ID and timing information.
+    Logs request as one JSON-Lines entry with trace ID and timing information.
     Guarantees raw PII never reaches disk in the clear.
     """
     tid = trace_id or str(uuid.uuid4())
@@ -233,7 +232,7 @@ def run_api_smoke_test():
     Direct functional test of FastAPI endpoints and structured logging.
     """
     print("=" * 70)
-    print("TASK 11 & 12: FASTAPI & STRUCTURED LOGGING VERIFICATION")
+    print("FASTAPI & STRUCTURED LOGGING VERIFICATION")
     print("=" * 70)
 
     # Simulate /ask with PII

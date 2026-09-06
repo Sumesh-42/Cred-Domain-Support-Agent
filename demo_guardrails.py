@@ -1,6 +1,5 @@
 """
 Cred Domain Support Agent - Guardrails Demonstration
-Part 2, Task 10
 
 Demonstrates each guardrail firing on a deliberate test case:
 1. Input-side PII Masking:
@@ -25,7 +24,7 @@ def run_guardrails_demonstration() -> str:
         print(msg)
 
     log("=" * 75)
-    log("TASK 10: GUARDRAILS DEMONSTRATION TRANSCRIPT")
+    log("GUARDRAILS DEMONSTRATION TRANSCRIPT")
     log("=" * 75)
 
     # Test 1: PII Masking Guardrail
@@ -69,7 +68,7 @@ def run_guardrails_demonstration() -> str:
 
     full_transcript = "\n".join(lines)
     os.makedirs("transcripts", exist_ok=True)
-    with open("transcripts/task10_guardrails_transcript.txt", "w", encoding="utf-8") as f:
+    with open("transcripts/guardrails_transcript.txt", "w", encoding="utf-8") as f:
         f.write(full_transcript)
 
     return full_transcript

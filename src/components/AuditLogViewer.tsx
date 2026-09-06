@@ -14,7 +14,7 @@ export const AuditLogViewer: React.FC<AuditLogViewerProps> = ({ logs }) => {
           <div className="flex items-center gap-2">
             <Terminal className="w-4 h-4 text-stone-700" />
             <h3 className="text-xs font-bold text-stone-900 uppercase tracking-wide">
-              Structured Audit Logs (Task 12)
+              Structured Audit Logs
             </h3>
             <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-100 text-emerald-800">
               Zero PII Leakage Enforced

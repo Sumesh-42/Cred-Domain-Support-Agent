@@ -1,0 +1,216 @@
+{
+  "queries_evaluated": 15,
+  "mean_context_relevance": 0.5556,
+  "mean_groundedness": 1.0,
+  "mean_answer_relevance": 0.8273,
+  "composite_triad_score": 0.7943,
+  "evaluations": [
+    {
+      "id": "Q01",
+      "topic": "Loan Eligibility",
+      "query": "What are the KYC documents required for a salaried applicant?",
+      "target_docs": [
+        "DOC-KYC-REQUIREMENTS"
+      ],
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 0.6667,
+      "triad_average": 0.8889,
+      "fallback_triggered": false,
+      "similarity": 0.2645
+    },
+    {
+      "id": "Q02",
+      "topic": "Prepayment Penalty",
+      "query": "Can I prepay my floating rate home loan without penalty?",
+      "target_docs": [
+        "DOC-PREPAYMENT-PENALTY"
+      ],
+      "context_relevance": 0.3333,
+      "groundedness": 1.0,
+      "answer_relevance": 1.0,
+      "triad_average": 0.7778,
+      "fallback_triggered": false,
+      "similarity": 0.1689
+    },
+    {
+      "id": "Q03",
+      "topic": "EMI Calculation",
+      "query": "How is EMI calculated on reducing balance?",
+      "target_docs": [
+        "DOC-EMI-CALCULATION"
+      ],
+      "context_relevance": 0.6667,
+      "groundedness": 1.0,
+      "answer_relevance": 0.72,
+      "triad_average": 0.7956,
+      "fallback_triggered": false,
+      "similarity": 0.2926
+    },
+    {
+      "id": "Q04",
+      "topic": "Credit Card Fees",
+      "query": "What are the annual fees and late charges for credit cards?",
+      "target_docs": [
+        "DOC-CREDIT-CARD-FEES"
+      ],
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 0.8727,
+      "triad_average": 0.9576,
+      "fallback_triggered": false,
+      "similarity": 0.2822
+    },
+    {
+      "id": "Q05",
+      "topic": "Fraud Dispute",
+      "query": "What is the fraud dispute resolution turnaround time?",
+      "target_docs": [
+        "DOC-FRAUD-DISPUTE"
+      ],
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 1.0,
+      "triad_average": 1.0,
+      "fallback_triggered": false,
+      "similarity": 0.5193
+    },
+    {
+      "id": "Q06",
+      "topic": "Minimum Balance",
+      "query": "What is the penalty for not maintaining minimum balance?",
+      "target_docs": [
+        "DOC-MIN-BALANCE"
+      ],
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 0.9,
+      "triad_average": 0.9667,
+      "fallback_triggered": false,
+      "similarity": 0.346
+    },
+    {
+      "id": "Q07",
+      "topic": "Foreclosure Charges",
+      "query": "Are there foreclosure charges on fixed rate personal loans?",
+      "target_docs": [
+        "DOC-PREPAYMENT-PENALTY"
+      ],
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 1.0,
+      "triad_average": 1.0,
+      "fallback_triggered": false,
+      "similarity": 0.2914
+    },
+    {
+      "id": "Q08",
+      "topic": "NRI Lending",
+      "query": "Can Non-Resident Indians apply for home loans at Cred?",
+      "target_docs": [
+        "DOC-NRI-ELIGIBILITY"
+      ],
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 1.0,
+      "triad_average": 1.0,
+      "fallback_triggered": false,
+      "similarity": 0.2858
+    },
+    {
+      "id": "Q09",
+      "topic": "Account Closure",
+      "query": "What are the requirements to close an active credit line account?",
+      "target_docs": [
+        "DOC-ACCOUNT-CLOSURE"
+      ],
+      "context_relevance": 0.0,
+      "groundedness": 1.0,
+      "answer_relevance": 0.5,
+      "triad_average": 0.5,
+      "fallback_triggered": false,
+      "similarity": 0.2217
+    },
+    {
+      "id": "Q10",
+      "topic": "Interest Rates",
+      "query": "How is benchmark interest rate pegged to repo rate?",
+      "target_docs": [
+        "DOC-INTEREST-RATES"
+      ],
+      "context_relevance": 0.6667,
+      "groundedness": 1.0,
+      "answer_relevance": 1.0,
+      "triad_average": 0.8889,
+      "fallback_triggered": false,
+      "similarity": 0.4451
+    },
+    {
+      "id": "Q11",
+      "topic": "Moratorium Policy",
+      "query": "Is loan moratorium allowed during economic emergencies?",
+      "target_docs": [
+        "DOC-MORATORIUM"
+      ],
+      "context_relevance": 0.0,
+      "groundedness": 1.0,
+      "answer_relevance": 0.5,
+      "triad_average": 0.5,
+      "fallback_triggered": false,
+      "similarity": 0.1579
+    },
+    {
+      "id": "Q12",
+      "topic": "Collateral & Guarantees",
+      "query": "What collateral is required for unsecured personal credit lines?",
+      "target_docs": [
+        "DOC-COLLATERAL"
+      ],
+      "context_relevance": 0.3333,
+      "groundedness": 1.0,
+      "answer_relevance": 0.75,
+      "triad_average": 0.6944,
+      "fallback_triggered": false,
+      "similarity": 0.1779
+    },
+    {
+      "id": "Q13",
+      "topic": "Out-of-Scope Recipe",
+      "query": "What is the authentic recipe for chicken tikka masala?",
+      "target_docs": [],
+      "context_relevance": 0.0,
+      "groundedness": 1.0,
+      "answer_relevance": 1.0,
+      "triad_average": 0.6667,
+      "fallback_triggered": true,
+      "similarity": 0.0
+    },
+    {
+      "id": "Q14",
+      "topic": "Out-of-Scope Weather",
+      "query": "What is the weather forecast for Bangalore this weekend?",
+      "target_docs": [],
+      "context_relevance": 0.0,
+      "groundedness": 1.0,
+      "answer_relevance": 1.0,
+      "triad_average": 0.6667,
+      "fallback_triggered": true,
+      "similarity": 0.0
+    },
+    {
+      "id": "Q15",
+      "topic": "Credit Score Edge Case",
+      "query": "Will applying for multiple loans in one week damage my CIBIL score?",
+      "target_docs": [
+        "DOC-CREDIT-CARD-FEES",
+        "DOC-LOAN-ELIGIBILITY"
+      ],
+      "context_relevance": 0.3333,
+      "groundedness": 1.0,
+      "answer_relevance": 0.5,
+      "triad_average": 0.6111,
+      "fallback_triggered": false,
+      "similarity": 0.2546
+    }
+  ]
+}

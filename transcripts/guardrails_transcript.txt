@@ -1,5 +1,5 @@
 ===========================================================================
-TASK 10: GUARDRAILS DEMONSTRATION TRANSCRIPT
+GUARDRAILS DEMONSTRATION TRANSCRIPT
 ===========================================================================
 
 [TEST CASE 1: FIXED-FORMAT PII MASKING]

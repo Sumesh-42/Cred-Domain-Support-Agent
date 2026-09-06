@@ -1,0 +1,162 @@
+{
+  "fixed_size_results": [
+    {
+      "query": "What are the KYC documents required for a salaried applicant?",
+      "retrieved_docs": [
+        "DOC-KYC-REQUIREMENTS"
+      ],
+      "relevant_docs": [
+        "DOC-KYC-REQUIREMENTS"
+      ],
+      "true_positives": 1,
+      "precision_at_3": 1.0,
+      "recall_at_3": 1.0,
+      "arithmetic_p": "1/1 = 1.0000",
+      "arithmetic_r": "1/1 = 1.0000"
+    },
+    {
+      "query": "Can I prepay my floating rate home loan without penalty?",
+      "retrieved_docs": [
+        "DOC-NRI-ELIGIBILITY",
+        "DOC-PREPAYMENT-PENALTY",
+        "DOC-LOAN-ELIGIBILITY"
+      ],
+      "relevant_docs": [
+        "DOC-PREPAYMENT-PENALTY"
+      ],
+      "true_positives": 1,
+      "precision_at_3": 0.3333,
+      "recall_at_3": 1.0,
+      "arithmetic_p": "1/3 = 0.3333",
+      "arithmetic_r": "1/1 = 1.0000"
+    },
+    {
+      "query": "How is EMI calculated on reducing balance?",
+      "retrieved_docs": [
+        "DOC-EMI-CALCULATION",
+        "DOC-MIN-BALANCE"
+      ],
+      "relevant_docs": [
+        "DOC-EMI-CALCULATION"
+      ],
+      "true_positives": 1,
+      "precision_at_3": 0.5,
+      "recall_at_3": 1.0,
+      "arithmetic_p": "1/2 = 0.5000",
+      "arithmetic_r": "1/1 = 1.0000"
+    },
+    {
+      "query": "What are the annual fees and late charges for credit cards?",
+      "retrieved_docs": [
+        "DOC-CREDIT-CARD-FEES"
+      ],
+      "relevant_docs": [
+        "DOC-CREDIT-CARD-FEES"
+      ],
+      "true_positives": 1,
+      "precision_at_3": 1.0,
+      "recall_at_3": 1.0,
+      "arithmetic_p": "1/1 = 1.0000",
+      "arithmetic_r": "1/1 = 1.0000"
+    },
+    {
+      "query": "What is the fraud dispute resolution turnaround time?",
+      "retrieved_docs": [
+        "DOC-FRAUD-DISPUTE"
+      ],
+      "relevant_docs": [
+        "DOC-FRAUD-DISPUTE"
+      ],
+      "true_positives": 1,
+      "precision_at_3": 1.0,
+      "recall_at_3": 1.0,
+      "arithmetic_p": "1/1 = 1.0000",
+      "arithmetic_r": "1/1 = 1.0000"
+    }
+  ],
+  "fixed_size_averages": {
+    "avg_precision_at_3": 0.7667,
+    "avg_recall_at_3": 1.0
+  },
+  "sentence_based_results": [
+    {
+      "query": "What are the KYC documents required for a salaried applicant?",
+      "retrieved_docs": [
+        "DOC-KYC-REQUIREMENTS"
+      ],
+      "relevant_docs": [
+        "DOC-KYC-REQUIREMENTS"
+      ],
+      "true_positives": 1,
+      "precision_at_3": 1.0,
+      "recall_at_3": 1.0,
+      "arithmetic_p": "1/1 = 1.0000",
+      "arithmetic_r": "1/1 = 1.0000"
+    },
+    {
+      "query": "Can I prepay my floating rate home loan without penalty?",
+      "retrieved_docs": [
+        "DOC-LOAN-ELIGIBILITY",
+        "DOC-NRI-ELIGIBILITY",
+        "DOC-PREPAYMENT-PENALTY"
+      ],
+      "relevant_docs": [
+        "DOC-PREPAYMENT-PENALTY"
+      ],
+      "true_positives": 1,
+      "precision_at_3": 0.3333,
+      "recall_at_3": 1.0,
+      "arithmetic_p": "1/3 = 0.3333",
+      "arithmetic_r": "1/1 = 1.0000"
+    },
+    {
+      "query": "How is EMI calculated on reducing balance?",
+      "retrieved_docs": [
+        "DOC-EMI-CALCULATION",
+        "DOC-MIN-BALANCE"
+      ],
+      "relevant_docs": [
+        "DOC-EMI-CALCULATION"
+      ],
+      "true_positives": 1,
+      "precision_at_3": 0.5,
+      "recall_at_3": 1.0,
+      "arithmetic_p": "1/2 = 0.5000",
+      "arithmetic_r": "1/1 = 1.0000"
+    },
+    {
+      "query": "What are the annual fees and late charges for credit cards?",
+      "retrieved_docs": [
+        "DOC-CREDIT-CARD-FEES",
+        "DOC-ACCOUNT-CLOSURE"
+      ],
+      "relevant_docs": [
+        "DOC-CREDIT-CARD-FEES"
+      ],
+      "true_positives": 1,
+      "precision_at_3": 0.5,
+      "recall_at_3": 1.0,
+      "arithmetic_p": "1/2 = 0.5000",
+      "arithmetic_r": "1/1 = 1.0000"
+    },
+    {
+      "query": "What is the fraud dispute resolution turnaround time?",
+      "retrieved_docs": [
+        "DOC-FRAUD-DISPUTE"
+      ],
+      "relevant_docs": [
+        "DOC-FRAUD-DISPUTE"
+      ],
+      "true_positives": 1,
+      "precision_at_3": 1.0,
+      "recall_at_3": 1.0,
+      "arithmetic_p": "1/1 = 1.0000",
+      "arithmetic_r": "1/1 = 1.0000"
+    }
+  ],
+  "sentence_based_averages": {
+    "avg_precision_at_3": 0.6667,
+    "avg_recall_at_3": 1.0
+  },
+  "recommendation": "We recommend deploying the Sentence-Based Chunking strategy. Sentence-based chunking achieved an average Precision@3 of 0.6667 and Recall@3 of 1.0000, compared to Fixed-Size Chunking which achieved Precision@3 of 0.7667 and Recall@3 of 1.0000. Because regulatory policy clauses are self-contained syntactic units, sentence chunking eliminates cross-topic boundary noise and guarantees that each retrieved chunk delivers a coherent, legally actionable banking rule without artificial sentence truncation."
+}

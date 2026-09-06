@@ -1,6 +1,5 @@
 """
 Cred Domain Support Agent - LangGraph Checkpoint Time-Travel & Step Interruption
-Part 3, Task 15
 
 Demonstrates:
 1. Step-wise Graph Interruption: Execution paused after 'input_guardrail' or 'loan_status_tool'.
@@ -23,7 +22,7 @@ def run_time_travel_demonstration() -> str:
         print(msg)
 
     log("=" * 75)
-    log("TASK 15: CHECKPOINT TIME-TRAVEL & INTERRUPT RESUMPTION DEMO")
+    log("CHECKPOINT TIME-TRAVEL & INTERRUPT RESUMPTION DEMO")
     log("=" * 75)
 
     thread_id = "thread_timetravel_demo"
@@ -97,7 +96,7 @@ def run_time_travel_demonstration() -> str:
 
     full_text = "\n".join(transcript)
     os.makedirs("transcripts", exist_ok=True)
-    with open("transcripts/task15_timetravel_transcript.txt", "w", encoding="utf-8") as f:
+    with open("transcripts/timetravel_transcript.txt", "w", encoding="utf-8") as f:
         f.write(full_text)
 
     return full_text

@@ -1,6 +1,5 @@
 """
 Cred Domain Support Agent - Multi-Turn Memory & Fresh Transcript Demonstration
-Part 2, Task 8
 
 Demonstrates:
 1. Multi-turn conversation where state (active loan ID CRED-LN-0004) is carried
@@ -23,7 +22,7 @@ def run_memory_demonstration() -> str:
         print(line)
 
     log("=" * 75)
-    log("TASK 8: MULTI-TURN MEMORY PERSISTENCE TRANSCRIPT")
+    log("MULTI-TURN MEMORY PERSISTENCE TRANSCRIPT")
     log("=" * 75)
 
     multi_thread = "thread_multiturn_demo"
@@ -77,7 +76,7 @@ def run_memory_demonstration() -> str:
 
     full_transcript = "\n".join(transcript_lines)
     os.makedirs("transcripts", exist_ok=True)
-    with open("transcripts/task8_memory_transcript.txt", "w", encoding="utf-8") as f:
+    with open("transcripts/memory_transcript.txt", "w", encoding="utf-8") as f:
         f.write(full_transcript)
 
     return full_transcript

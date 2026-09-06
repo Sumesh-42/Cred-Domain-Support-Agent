@@ -20,7 +20,7 @@ export const ArchitectureViewer: React.FC = () => {
           <div className="flex items-center gap-2">
             <Network className="w-4 h-4 text-stone-700" />
             <h3 className="text-xs font-bold text-stone-900 uppercase tracking-wide">
-              LangGraph StateGraph Execution Topology (Task 7)
+              LangGraph StateGraph Execution Topology
             </h3>
           </div>
           <span className="text-xs font-mono text-stone-500 bg-stone-100 px-2 py-0.5 rounded">
@@ -93,13 +93,13 @@ export const ArchitectureViewer: React.FC = () => {
 
       {/* Persistence & Checkpointing */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* SQLite Checkpointer (Task 8 & 15) */}
+        {/* SQLite Checkpointer */}
         <div className="p-4.5 rounded-xl border border-stone-200 bg-white shadow-xs space-y-2.5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Database className="w-4 h-4 text-stone-700" />
               <h4 className="text-xs font-bold text-stone-900 uppercase">
-                SQLite Checkpointer & Time-Travel (Tasks 8 & 15)
+                SQLite Checkpointer & Time-Travel
               </h4>
             </div>
             <span className="text-[10px] font-mono bg-stone-100 px-1.5 py-0.5 rounded text-stone-600">
@@ -124,13 +124,13 @@ export const ArchitectureViewer: React.FC = () => {
           </div>
         </div>
 
-        {/* Model Context Protocol Server (Task 14) */}
+        {/* Model Context Protocol Server */}
         <div className="p-4.5 rounded-xl border border-stone-200 bg-white shadow-xs space-y-2.5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Server className="w-4 h-4 text-stone-700" />
               <h4 className="text-xs font-bold text-stone-900 uppercase">
-                Model Context Protocol (MCP) Server (Task 14)
+                Model Context Protocol (MCP) Server
               </h4>
             </div>
             <span className="text-[10px] font-mono bg-stone-100 px-1.5 py-0.5 rounded text-stone-600">

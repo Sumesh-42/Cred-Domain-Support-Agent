@@ -1,6 +1,5 @@
 """
 Cred Domain Support Agent - Model Context Protocol (MCP) Server
-Part 3, Task 14
 
 Implements the Model Context Protocol (MCP) standard for AI Tool Execution.
 Supports:
@@ -260,12 +259,12 @@ def process_mcp_request(json_rpc_req: Dict[str, Any]) -> Dict[str, Any]:
         }
 
 
+dispatch_mcp_request = process_mcp_request
+
+
 def run_mcp_demonstration():
-    """
-    Demonstrates MCP protocol initialization, tools/list, and tools/call.
-    """
     print("=" * 75)
-    print("TASK 14: MODEL CONTEXT PROTOCOL (MCP) SERVER DEMONSTRATION")
+    print("MODEL CONTEXT PROTOCOL (MCP) SERVER DEMONSTRATION")
     print("=" * 75)
 
     # 1. Initialize

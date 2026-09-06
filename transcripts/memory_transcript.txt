@@ -1,5 +1,5 @@
 ===========================================================================
-TASK 8: MULTI-TURN MEMORY PERSISTENCE TRANSCRIPT
+MULTI-TURN MEMORY PERSISTENCE TRANSCRIPT
 ===========================================================================
 
 --- SESSION 1: MULTI-TURN EXCHANGE (Thread: thread_multiturn_demo) ---

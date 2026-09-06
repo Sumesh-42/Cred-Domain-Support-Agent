@@ -1,0 +1,26 @@
+{
+  "retry_policy": {
+    "max_attempts": 4,
+    "base_backoff_sec": 0.1,
+    "backoff_multiplier": 2.0,
+    "cap_sec": 0.5,
+    "jitter": false,
+    "transient_recovery_test": {
+      "success": true,
+      "attempts_used": 3,
+      "delays": [
+        0.1,
+        0.2
+      ],
+      "result": "Connected successfully to upstream banking ledger",
+      "elapsed_sec": 0.3009
+    }
+  },
+  "timeouts": {
+    "node_timeout_sec": 0.05,
+    "graph_timeout_sec": 0.15,
+    "node_timeout_enforced": true,
+    "graph_timeout_enforced": true
+  },
+  "status": "PASSED"
+}

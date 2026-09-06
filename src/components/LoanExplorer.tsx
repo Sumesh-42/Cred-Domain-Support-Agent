@@ -89,7 +89,7 @@ export const LoanExplorer: React.FC<LoanExplorerProps> = ({
           <div className="flex items-center gap-2">
             <Calculator className="w-4 h-4 text-stone-700" />
             <span className="text-xs font-semibold text-stone-900 uppercase tracking-wide">
-              Live Escalation Score Simulator (Task 6 Formula)
+              Live Escalation Score Simulator (Escalation Formula)
             </span>
           </div>
           <span className="text-xs font-mono text-stone-500 bg-white px-2 py-0.5 rounded border border-stone-200">

@@ -1,0 +1,16 @@
+{
+  "thread_id": "thread_checkpoint_resumed_42",
+  "interrupted_node": "input_guardrail",
+  "initial_completed_nodes": [
+    "input_guardrail"
+  ],
+  "resumed_completed_nodes": [
+    "input_guardrail",
+    "loan_status_tool",
+    "output_guardrail"
+  ],
+  "re_execution_prevented": true,
+  "sqlite_persisted": true,
+  "final_intent": "loan_status",
+  "status": "PASSED"
+}

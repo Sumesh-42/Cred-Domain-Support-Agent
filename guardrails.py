@@ -1,6 +1,5 @@
 """
 Cred Domain Support Agent - Guardrails Engine
-Part 2, Task 10 & Part 3, Task 12
 
 Implements:
 1. Input-side fixed-format PII masking:

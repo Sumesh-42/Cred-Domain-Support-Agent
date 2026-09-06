@@ -93,7 +93,7 @@ export default function App() {
             <div className="hidden sm:flex items-center gap-3 text-xs">
               <span className="flex items-center gap-1.5 text-stone-600 bg-stone-50 px-2.5 py-1 rounded-lg border border-stone-200 font-mono text-[11px]">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                All 15 Tasks Operational
+                All Subsystems Operational
               </span>
             </div>
           </div>
