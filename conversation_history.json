@@ -439,10 +439,17 @@
     },
     {
       "turn_index": 2,
+<<<<<<< HEAD
       "timestamp": 1788699289.7723596,
       "user_query": "My PAN is [MASKED_PAN] and bank account is [MASKED_BANK_ACCOUNT]. What is the education loan eligibility?",
       "response": {
         "response_id": "5e84a155-ca14-44d2-9883-bd570efdbaac",
+=======
+      "timestamp": 1788699619.5613327,
+      "user_query": "My PAN is [MASKED_PAN] and bank account is [MASKED_BANK_ACCOUNT]. What is the education loan eligibility?",
+      "response": {
+        "response_id": "bf917ac2-3799-4071-8780-abfd2911fd33",
+>>>>>>> b39b0667fb617fdbd57b9eb2c882bd36244f22f2
         "intent": "rag_policy",
         "query": "My PAN is [MASKED_PAN] and bank account is [MASKED_BANK_ACCOUNT]. What is the education loan eligibility?",
         "answer": "According to Cred Lending Policy (DOC-LOAN-ELIGIBILITY, DOC-NRI-ELIGIBILITY, DOC-KYC-REQUIREMENTS): Loan Eligibility Criteria by Loan Type: Auto and education loans mandate a minimum credit score of 720, with education loans exceeding \u20b9750,000 requiring a parent or guardian as primary financial co-guarantor. Non-Resident Indian (NRI) Account and Loan Eligibility: NRE account balances and interest yields remain completely exempt from Indian income taxation and are freely repatriable into foreign currency accounts without regulatory ceiling.",
