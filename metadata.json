@@ -2,5 +2,7 @@
   "name": "Cred Domain Support Agent",
   "description": "Production-grade banking and lending operations support agent with LangGraph, RAG core, guardrails, resilience, SQLite checkpointing, FastMCP, and interactive dashboard.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
